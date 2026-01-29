@@ -37,7 +37,11 @@ export async function Team() {
                   <p className="text-muted-foreground text-base leading-relaxed mb-4">{doctor.bio}</p>
                   <div className="flex items-start justify-center text-sm text-primary font-medium">
                     <MapPinIcon />
-                    <span className="text-center">{doctor.location}</span>
+                    <div className="flex flex-col text-left">
+                      {doctor.location && doctor.location.split(', ').map((line: string, index: number) => (
+                        <span key={index}>{line}</span>
+                      ))}
+                    </div>
                   </div>
                 </CardContent>
               </Card>

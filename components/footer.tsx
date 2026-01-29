@@ -46,7 +46,7 @@ export function Footer() {
 
         <div className="mt-8 pt-6 border-t border-card/20 text-center">
           <p className="text-card/60 text-sm">
-            © {new Date().getFullYear()} Ginecología Regenerativa. Todos los derechos reservados.
+            © {new Date().getFullYear()} Ginecología Regenerativa. Hecho por <a className="text-card/70 hover:text-primary hover:scale-105 inline-block transition-all duration-300 text-sm font-medium" href="https://barragan-natalia-portfolio-vert-eight-97.vercel.app/" target="_blank" rel="noopener noreferrer">Natalia Barragan</a>.
           </p>
         </div>
       </div>
