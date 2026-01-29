@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { OfficeModal } from "./office-modal"
-import client from "../../tina/__generated__/client"
+import client from "@/tina/__generated__/client"
 
 export async function Team() {
   // Pedimos la lista de doctoras a Tina

@@ -1,6 +1,6 @@
 import { Heart, Activity, Sparkles, Leaf, Shield, HelpCircle } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
-import client from "../tina/__generated__/client" // Ajusta la ruta según tu carpeta
+import client from "@/tina/__generated__/client"
 
 // Mapa para convertir el string de Tina en el componente de Lucide
 const iconMap: any = {
