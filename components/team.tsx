@@ -1,12 +1,34 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { OfficeModal } from "./office-modal"
-import client from "@/tina/__generated__/client"
 
-export async function Team() {
-  // Pedimos la lista de doctoras a Tina
-  const response = await client.queries.doctoraConnection();
-  const doctorsData = response.data.doctoraConnection.edges;
+const doctors = [
+  {
+    id: "alvarez",
+    name: "Dra. Patricia Alvarez",
+    specialty: "Médica Especialista en Ginecología y Obstetricia UNLP. MP 93492. MN 98120",
+    image: "/uploads/alvarez.jpg",
+    bio: "Diplomada en Ginecología Regenerativa, Estética y Funcional. Posgrado en Menopausia y Andropausia.",
+    location: "Consultorio Corpus, Tel. 2317-523636/37"
+  },
+  {
+    id: "buonanno",
+    name: "Dra. Alejandra Buonanno",
+    specialty: "Médica Especialista en Ginecología y Obstetricia UNLP. MP 70817",
+    image: "/uploads/buonanno.jpg",
+    bio: "Diplomada en Ginecología Regenerativa, Estética y Funcional. Posgrado en Menopausia y Andropausia.",
+    location: "Consultorios Galeno, Tel. 2317-612842"
+  },
+  {
+    id: "zega",
+    name: "Dra. Cecilia Zega",
+    specialty: "Médica Especialista en Ginecología y Obstetricia UNLP. MP 111765",
+    image: "/uploads/zega.jpg",
+    bio: "Diplomada en Ginecología Regenerativa, Estética y Funcional. Posgrado en Menopausia y Andropausia.",
+    location: "Consultorio Salta Salud, Tel. 2317-522612"
+  }
+]
 
+export function Team() {
   return (
     <section id="equipo" className="py-20 bg-muted">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,8 +42,7 @@ export async function Team() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {doctorsData?.map((item: any) => {
-            const doctor = item.node;
+          {doctors.map((doctor) => {
             return (
               <Card key={doctor.id} className="bg-card border-border hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 text-center">

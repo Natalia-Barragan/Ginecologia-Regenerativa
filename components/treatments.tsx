@@ -1,6 +1,5 @@
 import { Heart, Activity, Sparkles, Leaf, Shield, HelpCircle } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
-import client from "@/tina/__generated__/client"
 
 // Mapa para convertir el string de Tina en el componente de Lucide
 const iconMap: any = {
@@ -11,11 +10,41 @@ const iconMap: any = {
   Heart,
 }
 
-export async function Treatments() {
-  // 1. Pedimos los datos a Tina
-  const response = await client.queries.tratamientoConnection();
-  const treatmentsData = response.data.tratamientoConnection.edges;
+const treatments = [
+  {
+    id: "bioestimuladores",
+    title: "Bioestimuladores",
+    description: "Inyectables de última generación que activan la producción natural de colágeno para restaurar la firmeza.",
+    icon: "Sparkles"
+  },
+  {
+    id: "biomodulacion-hormonal",
+    title: "Biomodulación hormonal",
+    description: "Equilibrio hormonal personalizado mediante pellets para optimizar la energía, salud y bienestar general del paciente.",
+    icon: "Heart"
+  },
+  {
+    id: "emsella",
+    title: "EMSELLA",
+    description: "Tecnología avanzada para fortalecer el piso pélvico y tratar la incontinencia de forma no invasiva.",
+    icon: "Shield"
+  },
+  {
+    id: "prp",
+    title: "Plasma Rico en Plaquetas",
+    description: "Tratamiento regenerativo natural que utiliza tus propias células para bioestimular y rejuvenecer la piel.",
+    icon: "Leaf"
+  },
+  {
+    id: "hifu",
+    title: "HIFU íntimo femenino",
+    description: "Ultrasonido focalizado que regenera el tejido vaginal, mejorando la tensión y la salud íntima integral.",
+    icon: "Activity"
+  }
+]
 
+
+export function Treatments() {
   return (
     <section id="tratamientos" className="py-20 bg-background">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -29,8 +58,7 @@ export async function Treatments() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {treatmentsData?.map((item: any) => {
-            const treatment = item.node;
+          {treatments.map((treatment) => {
             const IconComponent = iconMap[treatment.icon] || HelpCircle;
 
             return (
