@@ -6,7 +6,7 @@ export function Hero() {
     <section className="pt-8 pb-20 md:pt-12 md:pb-28 bg-background">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Logo Placeholder */}
-        <div className="mx-auto mb-10 w-80 h-80 md:w-80 md:h-80 relative flex items-center justify-center">
+        <div className="mx-auto mb-8 w-80 h-80 md:w-80 md:h-80 relative flex items-center justify-center">
           <Image
             src="/logo.jpg"
             alt="Ginecología Regenerativa Logo"
