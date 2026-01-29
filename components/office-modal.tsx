@@ -33,53 +33,48 @@ export function OfficeModal() {
             </DialogTrigger>
 
             {/* EL CAMBIO ESTÁ ACÁ: Quitamos el transform manual y usamos clases de Shadcn nativas */}
-            <DialogContent className="w-[95vw] max-w-5xl p-0 overflow-hidden bg-gray-50 border-none rounded-2xl">
-                <div className="flex flex-col max-h-[90vh]">
-
-                    {/* Header Fijo */}
-                    <DialogHeader className="p-6 bg-white border-b flex-shrink-0">
-                        <DialogTitle className="font-serif text-2xl md:text-3xl text-primary text-center">
-                            Nuestro Equipo
-                        </DialogTitle>
-                    </DialogHeader>
-
-                    {/* Contenido con Scroll Interno Independiente */}
-                    <div className="flex-1 overflow-y-auto p-4 md:p-8">
-                        <div className="grid lg:grid-cols-2 gap-8 items-start">
-
-                            {/* Columna Carrusel */}
-                            <div className="w-full px-2">
-                                <Carousel className="w-full">
-                                    <CarouselContent>
-                                        {[1, 2, 3].map((n) => (
-                                            <CarouselItem key={n}>
-                                                <div className="aspect-[4/5] bg-white rounded-xl shadow-md overflow-hidden border border-rose-100">
+            <DialogContent
+                className="fixed left-[50%] top-[50%] z-50 w-full max-w-[95vw] sm:max-w-6xl overflow-hidden max-h-[95vh] p-0 bg-gray-100 rounded-lg shadow-xl outline-none focus:outline-none translate-x-[-50%] translate-y-[-50%] flex flex-col"
+            >
+                <DialogHeader className="pt-5 pb-4 px-6 bg-white border-b flex-shrink-0">
+                    <DialogTitle className="font-serif text-xl md:text-3xl text-primary text-center">Nuestro Equipo</DialogTitle>
+                </DialogHeader>
+                <div className="flex-1 overflow-y-auto md:overflow-hidden p-4 md:p-6">
+                    <div className="grid md:grid-cols-2 gap-3 md:gap-8 items-start h-full">
+                        {/* Carousel */}
+                        <div className="w-full">
+                            <Carousel className="w-full">
+                                <CarouselContent>
+                                    {[1, 2, 3].map((n) => (
+                                        <CarouselItem key={n}>
+                                            <div className="p-1">
+                                                <div className="h-48 md:h-[70vh] bg-background rounded-xl flex items-center justify-center shadow-[0_10px_30px_-5px_rgba(190,18,60,0.3)] overflow-hidden">
                                                     <img
                                                         src={`/images/equipo-${n}.jpg`}
-                                                        alt={`Equipo ${n}`}
-                                                        className="w-full h-full object-cover"
+                                                        alt={`Ginecología Regenerativa Equipo ${n}`}
+                                                        className="w-full h-full object-contain"
                                                     />
                                                 </div>
-                                            </CarouselItem>
-                                        ))}
-                                    </CarouselContent>
-                                    <CarouselPrevious className="flex left-2 sm:-left-4 bg-white/80 hover:bg-white border-primary/20 text-primary" />
-                                    <CarouselNext className="flex right-2 sm:-right-4 bg-white/80 hover:bg-white border-primary/20 text-primary" />
-                                </Carousel>
-                            </div>
+                                            </div>
+                                        </CarouselItem>
+                                    ))}
+                                </CarouselContent>
+                                <CarouselPrevious className="flex left-2 md:left-4 bg-white/80 hover:bg-white border-primary/20 text-primary z-10" />
+                                <CarouselNext className="flex right-2 md:right-4 bg-white/80 hover:bg-white border-primary/20 text-primary z-10" />
+                            </Carousel>
+                        </div>
 
-                            {/* Columna Texto - Ajustada para legibilidad */}
-                            <div className="text-muted-foreground space-y-5 text-sm md:text-lg leading-relaxed px-2">
-                                <p className="font-medium text-primary/90">
-                                    Somos un equipo interdisciplinario de tres médicas ginecólogas con una misión clara: integrar la ginecología tradicional con los últimos avances en medicina regenerativa y funcional.
-                                </p>
-                                <p>
-                                    Contamos con una sólida formación académica, incluyendo posgrados en menopausia y andropausia, además de una diplomatura en ginecología regenerativa, estética y funcional.
-                                </p>
-                                <p>
-                                    Nuestra mirada es integral; trabajamos para restablecer el bienestar y optimizar el escenario biológico de cada paciente de forma personalizada.
-                                </p>
-                            </div>
+                        {/* Text */}
+                        <div className="text-muted-foreground space-y-3 md:space-y-4 leading-normal md:leading-relaxed text-justify px-1 md:px-4 text-xs sm:text-sm md:text-lg/8">
+                            <p>
+                                Somos un equipo interdisciplinario de tres médicas ginecólogas con una misión clara: integrar la ginecología tradicional con los últimos avances en medicina regenerativa y funcional.
+                            </p>
+                            <p>
+                                Contamos con una sólida formación académica, incluyendo posgrados en menopausia y andropausia, además de una diplomatura en ginecología regenerativa, estética y funcional. Nuestra actualización es permanente; participamos activamente en congresos y sociedades científicas para garantizar tratamientos basados en la evidencia más reciente.
+                            </p>
+                            <p>
+                                Más allá de la técnica, nos define una mirada integral de la salud femenina. Trabajamos para restablecer el bienestar, biomodular el entorno hormonal y optimizar el escenario biológico de cada paciente, ofreciendo siempre un abordaje médico personalizado y cercano.
+                            </p>
                         </div>
                     </div>
                 </div>
