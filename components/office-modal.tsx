@@ -32,7 +32,7 @@ export function OfficeModal() {
                     </Button>
                 </div>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-6xl overflow-y-auto max-h-[95vh] p-6 lg:p-8 bg-gray-100">
+            <DialogContent className="sm:max-w-6xl overflow-y-auto max-h-[95vh] p-4 md:p-6 lg:p-8 bg-gray-100">
                 <DialogHeader className="sm:text-center mb-2">
                     <DialogTitle className="font-serif text-3xl text-primary">Nuestro Equipo</DialogTitle>
                 </DialogHeader>
@@ -43,7 +43,7 @@ export function OfficeModal() {
                             <CarouselContent>
                                 <CarouselItem>
                                     <div className="p-1">
-                                        <div className="h-[75vh] bg-background rounded-xl flex items-center justify-center shadow-[0_20px_60px_-10px_rgba(190,18,60,0.3)] overflow-hidden">
+                                        <div className="h-[40vh] md:h-[75vh] bg-background rounded-xl flex items-center justify-center shadow-[0_20px_60px_-10px_rgba(190,18,60,0.3)] overflow-hidden">
                                             <img
                                                 src="/images/equipo-1.jpg"
                                                 alt="Ginecología Regenerativa Equipo 1"
@@ -54,7 +54,7 @@ export function OfficeModal() {
                                 </CarouselItem>
                                 <CarouselItem>
                                     <div className="p-1">
-                                        <div className="h-[75vh] bg-background rounded-xl flex items-center justify-center shadow-[0_20px_60px_-10px_rgba(190,18,60,0.3)] overflow-hidden">
+                                        <div className="h-[40vh] md:h-[75vh] bg-background rounded-xl flex items-center justify-center shadow-[0_20px_60px_-10px_rgba(190,18,60,0.3)] overflow-hidden">
                                             <img
                                                 src="/images/equipo-2.jpg"
                                                 alt="Ginecología Regenerativa Equipo 2"
@@ -65,7 +65,7 @@ export function OfficeModal() {
                                 </CarouselItem>
                                 <CarouselItem>
                                     <div className="p-1">
-                                        <div className="h-[75vh] bg-background rounded-xl flex items-center justify-center shadow-[0_20px_60px_-10px_rgba(190,18,60,0.3)] overflow-hidden">
+                                        <div className="h-[40vh] md:h-[75vh] bg-background rounded-xl flex items-center justify-center shadow-[0_20px_60px_-10px_rgba(190,18,60,0.3)] overflow-hidden">
                                             <img
                                                 src="/images/equipo-3.jpg"
                                                 alt="Ginecología Regenerativa Equipo 3"
