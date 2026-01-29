@@ -1,0 +1,109 @@
+query tratamiento($relativePath: String!) {
+  tratamiento(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...TratamientoParts
+  }
+}
+
+query tratamientoConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: TratamientoFilter) {
+  tratamientoConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...TratamientoParts
+      }
+    }
+  }
+}
+
+query doctora($relativePath: String!) {
+  doctora(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...DoctoraParts
+  }
+}
+
+query doctoraConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: DoctoraFilter) {
+  doctoraConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...DoctoraParts
+      }
+    }
+  }
+}

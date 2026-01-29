@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build",
-    "dev": "next dev",
+    "build": "tinacms build && next build",
+    "dev": "tinacms dev -c \"next dev\"",
     "lint": "eslint .",
     "start": "next start"
   },
@@ -62,11 +62,13 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.9",
+    "@tinacms/cli": "^2.1.2",
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "postcss": "^8.5",
     "tailwindcss": "^4.1.9",
+    "tinacms": "^3.3.2",
     "tw-animate-css": "1.3.3",
     "typescript": "^5"
   }
