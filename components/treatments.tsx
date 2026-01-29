@@ -3,40 +3,34 @@ import { Card, CardContent } from "@/components/ui/card"
 
 const treatments = [
   {
-    icon: Sparkles,
-    title: "Rejuvenecimiento",
+    icon: Shield,
+    title: "EMSELLA",
     description:
-      "Tratamientos de vanguardia para el rejuvenecimiento íntimo, devolviendo confort y bienestar.",
-  },
-  {
-    icon: Stethoscope,
-    title: "Consultas Generales",
-    description:
-      "Atención ginecológica integral con un enfoque preventivo y personalizado para cada etapa de tu vida.",
+      "Tecnología avanzada para fortalecer el piso pélvico y tratar la incontinencia de forma no invasiva.",
   },
   {
     icon: Activity,
-    title: "Tratamientos Hormonales",
+    title: "HIFU íntimo femenino",
     description:
-      "Equilibrio hormonal a través de terapias especializadas para mejorar tu calidad de vida.",
-  },
-  {
-    icon: Heart,
-    title: "Salud Sexual",
-    description:
-      "Abordaje integral de la salud sexual femenina en un ambiente de confianza y respeto.",
+      "Ultrasonido focalizado que regenera el tejido vaginal, mejorando la tensión y la salud íntima integral.",
   },
   {
     icon: Leaf,
-    title: "Medicina Natural",
+    title: "Plasma Rico en Plaquetas",
     description:
-      "Opciones de tratamiento con enfoque natural y complementario para tu bienestar general.",
+      "Tratamiento regenerativo natural que utiliza tus propias células para bioestimular y rejuvenecer la piel.",
   },
   {
-    icon: Shield,
-    title: "Prevención",
+    icon: Sparkles,
+    title: "Bioestimuladores",
     description:
-      "Programas de prevención y detección temprana para cuidar tu salud a largo plazo.",
+      "Inyectables de última generación que activan la producción natural de colágeno para restaurar la firmeza.",
+  },
+  {
+    icon: Heart,
+    title: "Biomodulación hormonal",
+    description:
+      "Equilibrio hormonal personalizado mediante pellets para optimizar la energía, salud y bienestar general del paciente.",
   },
 ]
 
@@ -48,9 +42,9 @@ export function Treatments() {
           <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4">
             Nuestros Tratamientos
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Soluciones especializadas para cada necesidad, con tecnología de punta y calidez humana
-          </p>
+          {/* <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Tecnología de avanzada dedicada exclusivamente a la restauración y el bienestar vulvovaginal integral.
+          </p> */}
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -59,8 +53,8 @@ export function Treatments() {
               key={treatment.title}
               className="bg-card border-border hover:border-primary/30 hover:shadow-md transition-all group"
             >
-              <CardContent className="p-6">
-                <div className="w-14 h-14 rounded-full bg-secondary flex items-center justify-center mb-5 group-hover:bg-accent transition-colors">
+              <CardContent className="p-6 text-center">
+                <div className="w-14 h-14 rounded-full bg-secondary flex items-center justify-center mb-5 mx-auto group-hover:bg-accent transition-colors">
                   <treatment.icon className="w-7 h-7 text-primary" />
                 </div>
                 <h3 className="font-serif text-xl text-foreground mb-3">{treatment.title}</h3>

@@ -2,21 +2,29 @@ import { Card, CardContent } from "@/components/ui/card"
 
 const doctors = [
   {
-    name: "Dra. Alvarez",
-    specialty: "Especialista en Ginecología Regenerativa",
-    bio: "Con más de 15 años de experiencia, la Dra. Alvarez se dedica a brindar atención integral y personalizada, acompañando a cada mujer en su camino hacia el bienestar.",
+    name: "Dra. Patricia Alvarez",
+    specialty: "Médica Especialista en Ginecología y Obstetricia UNLP. MP 93492. MN 98120",
+    image: "/images/alvarez.jpg",
+    bio: "Diplomada en Ginecología Regenerativa, Estética y Funcional. Posgrado en Menopausia y Andropausia.",
+    location: "Consultorio Corpus, Tel. 2317-523636/37",
   },
   {
-    name: "Dra. Buonanno",
-    specialty: "Especialista en Tratamientos Hormonales",
-    bio: "La Dra. Buonanno combina su amplia formación médica con un enfoque humano y cercano, especializándose en el equilibrio hormonal y la salud femenina.",
+    name: "Dra. Alejandra Buonanno",
+    specialty: "Médica Especialista en Ginecología y Obstetricia UNLP. MP 70817",
+    image: "/images/buonanno.jpg",
+    bio: "Diplomada en Ginecología Regenerativa, Estética y Funcional. Posgrado en Menopausia y Andropausia.",
+    location: "Consultorios Galeno, Tel. 2317-612842",
   },
   {
-    name: "Dra. Zega",
-    specialty: "Especialista en Medicina Estética Ginecológica",
-    bio: "La Dra. Zega aporta innovación y cuidado en cada consulta, enfocándose en tratamientos de rejuvenecimiento y bienestar íntimo para la mujer moderna.",
+    name: "Dra. Cecilia Zega",
+    specialty: "Médica Especialista en Ginecología y Obstetricia UNLP. MP 111765",
+    image: "/images/zega.jpg",
+    bio: "Diplomada en Ginecología Regenerativa, Estética y Funcional. Posgrado en Menopausia y Andropausia.",
+    location: "Consultorio Salta Salud, Tel. 2317-522612",
   },
 ]
+
+import { OfficeModal } from "./office-modal"
 
 export function Team() {
   return (
@@ -27,7 +35,7 @@ export function Team() {
             Nuestras Especialistas
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Un equipo de profesionales dedicadas a tu salud y bienestar
+            Un equipo de profesionales dedicadas a tu salud y bienestar.
           </p>
         </div>
 
@@ -38,22 +46,40 @@ export function Team() {
               className="bg-card border-border hover:shadow-lg transition-shadow"
             >
               <CardContent className="p-6 text-center">
-                {/* Photo Placeholder */}
-                <div className="w-28 h-28 mx-auto mb-6 rounded-full bg-secondary flex items-center justify-center">
-                  <div className="w-24 h-24 rounded-full bg-accent/60 flex items-center justify-center">
-                    <span className="font-serif text-primary text-xl">
-                      {doctor.name.split(" ")[1]?.charAt(0) || "D"}
-                    </span>
-                  </div>
+                <div className="w-28 h-28 mx-auto mb-6 rounded-full overflow-hidden border-2 border-secondary">
+                  <img
+                    src={doctor.image}
+                    alt={doctor.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
                 <h3 className="font-serif text-xl text-foreground mb-2">{doctor.name}</h3>
                 <p className="text-primary text-sm font-medium mb-4">{doctor.specialty}</p>
-                <p className="text-muted-foreground text-base leading-relaxed">{doctor.bio}</p>
+                <p className="text-muted-foreground text-base leading-relaxed mb-4">{doctor.bio}</p>
+                <div className="flex items-start justify-center text-sm text-primary font-medium">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="mr-2 mt-0.5 shrink-0"
+                  >
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span className="text-center">{doctor.location}</span>
+                </div>
               </CardContent>
             </Card>
           ))}
         </div>
+        <OfficeModal />
       </div>
     </section>
   )

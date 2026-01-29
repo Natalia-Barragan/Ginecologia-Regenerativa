@@ -37,14 +37,14 @@ Teléfono de contacto: ${formData.phone}`
           <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4">
             Contacto y Reservas
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-none mx-auto whitespace-nowrap">
             Estamos acá para acompañarte. Agenda tu consulta o comunicate con nosotras.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-10">
           {/* Contact Info */}
-          <div className="space-y-6">
+          <div className="flex flex-col gap-6 lg:h-full lg:justify-between">
             <Card className="bg-card border-border">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">

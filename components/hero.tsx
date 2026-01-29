@@ -21,7 +21,7 @@ export function Hero() {
         </h1>
 
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed text-pretty">
-          Salud integral, bienestar y tratamientos especializados para la mujer en todas sus etapas.
+          Tecnología de avanzada dedicada exclusivamente a la restauración y el bienestar vulvovaginal integral.
         </p>
 
         <Button
