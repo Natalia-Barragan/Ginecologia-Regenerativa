@@ -37,7 +37,7 @@ Teléfono de contacto: ${formData.phone}`
           <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4">
             Contacto y Reservas
           </h2>
-          <p className="text-muted-foreground text-lg max-w-none mx-auto whitespace-nowrap">
+          <p className="text-muted-foreground text-lg max-w-none mx-auto whitespace-normal md:whitespace-nowrap">
             Estamos acá para acompañarte. Agenda tu consulta o comunicate con nosotras.
           </p>
         </div>
