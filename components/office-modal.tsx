@@ -32,18 +32,18 @@ export function OfficeModal() {
                     </Button>
                 </div>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-6xl overflow-y-auto max-h-[95vh] p-4 md:p-6 lg:p-8 bg-gray-100">
+            <DialogContent className="sm:max-w-6xl overflow-y-auto max-h-[85vh] md:max-h-[95vh] p-4 md:p-6 lg:p-8 bg-gray-100">
                 <DialogHeader className="sm:text-center mb-2">
-                    <DialogTitle className="font-serif text-3xl text-primary">Nuestro Equipo</DialogTitle>
+                    <DialogTitle className="font-serif text-2xl md:text-3xl text-primary">Nuestro Equipo</DialogTitle>
                 </DialogHeader>
-                <div className="grid md:grid-cols-2 gap-8 py-0 items-center">
+                <div className="grid md:grid-cols-2 gap-4 md:gap-8 py-0 items-center">
                     {/* Carousel */}
                     <div className="w-full">
                         <Carousel className="w-full">
                             <CarouselContent>
                                 <CarouselItem>
                                     <div className="p-1">
-                                        <div className="h-[40vh] md:h-[75vh] bg-background rounded-xl flex items-center justify-center shadow-[0_20px_60px_-10px_rgba(190,18,60,0.3)] overflow-hidden">
+                                        <div className="h-[35vh] md:h-[75vh] bg-background rounded-xl flex items-center justify-center shadow-[0_20px_60px_-10px_rgba(190,18,60,0.3)] overflow-hidden">
                                             <img
                                                 src="/images/equipo-1.jpg"
                                                 alt="Ginecología Regenerativa Equipo 1"
@@ -54,7 +54,7 @@ export function OfficeModal() {
                                 </CarouselItem>
                                 <CarouselItem>
                                     <div className="p-1">
-                                        <div className="h-[40vh] md:h-[75vh] bg-background rounded-xl flex items-center justify-center shadow-[0_20px_60px_-10px_rgba(190,18,60,0.3)] overflow-hidden">
+                                        <div className="h-[35vh] md:h-[75vh] bg-background rounded-xl flex items-center justify-center shadow-[0_20px_60px_-10px_rgba(190,18,60,0.3)] overflow-hidden">
                                             <img
                                                 src="/images/equipo-2.jpg"
                                                 alt="Ginecología Regenerativa Equipo 2"
@@ -65,7 +65,7 @@ export function OfficeModal() {
                                 </CarouselItem>
                                 <CarouselItem>
                                     <div className="p-1">
-                                        <div className="h-[40vh] md:h-[75vh] bg-background rounded-xl flex items-center justify-center shadow-[0_20px_60px_-10px_rgba(190,18,60,0.3)] overflow-hidden">
+                                        <div className="h-[35vh] md:h-[75vh] bg-background rounded-xl flex items-center justify-center shadow-[0_20px_60px_-10px_rgba(190,18,60,0.3)] overflow-hidden">
                                             <img
                                                 src="/images/equipo-3.jpg"
                                                 alt="Ginecología Regenerativa Equipo 3"
@@ -81,7 +81,7 @@ export function OfficeModal() {
                     </div>
 
                     {/* Text */}
-                    <div className="text-muted-foreground space-y-6 leading-relaxed text-justify px-4 text-lg/8 h-full flex flex-col justify-center">
+                    <div className="text-muted-foreground space-y-4 md:space-y-6 leading-relaxed text-justify px-2 md:px-4 text-base md:text-lg/8 h-full flex flex-col justify-center">
                         <p>
                             Somos un equipo interdisciplinario de tres médicas ginecólogas con una misión clara: integrar la ginecología tradicional con los últimos avances en medicina regenerativa y funcional.
                         </p>
@@ -97,3 +97,4 @@ export function OfficeModal() {
         </Dialog>
     )
 }
+
