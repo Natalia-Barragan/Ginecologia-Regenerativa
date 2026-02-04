@@ -98,7 +98,7 @@ Teléfono de contacto: ${formData.phone}`
                   </div>
                   <div>
                     <h3 className="font-serif text-lg text-foreground mb-1">Horarios</h3>
-                    <p className="text-muted-foreground text-base">Lunes a Viernes: 9:00 - 19:00</p>
+                    <p className="text-muted-foreground text-base">Lunes a Viernes: 15:00 - 20:00</p>
                     {/* <p className="text-sm text-muted-foreground mt-1">Sábados: 9:00 - 13:00</p> */}
                   </div>
                 </div>

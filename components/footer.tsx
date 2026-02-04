@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { Instagram } from "lucide-react"
 
 export function Footer() {
   return (
@@ -21,6 +22,20 @@ export function Footer() {
               Salud integral para la mujer en todas sus etapas
             </p>
           </div>
+
+          <a
+            href="https://www.instagram.com/ginecologiaregenerativa9dj?igsh=NjVoYmQxenpwNndt"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center gap-2 group transition-all hover:scale-110"
+          >
+            <div className="relative flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] shadow-lg text-white group-hover:shadow-pink-500/50 transition-all duration-300">
+              <Instagram className="h-7 w-7" />
+            </div>
+            {/* <span className="text-card/70 text-sm group-hover:text-card transition-colors">
+              ¡Seguinos en Instagram!
+            </span> */}
+          </a>
 
           <div className="flex items-center gap-6">
             <a
