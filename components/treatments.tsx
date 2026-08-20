@@ -57,14 +57,14 @@ export function Treatments() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           {treatments.map((treatment) => {
             const IconComponent = iconMap[treatment.icon] || HelpCircle;
 
             return (
               <Card
                 key={treatment.id}
-                className="bg-card border-border hover:border-primary/30 hover:shadow-md transition-all group"
+                className="bg-card border-border hover:border-primary/30 hover:shadow-md transition-all group w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
               >
                 <CardContent className="p-6 text-center">
                   <div className="w-14 h-14 rounded-full bg-secondary flex items-center justify-center mb-5 mx-auto group-hover:bg-accent transition-colors">

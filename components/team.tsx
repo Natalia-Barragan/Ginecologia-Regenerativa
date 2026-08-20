@@ -8,7 +8,7 @@ const doctors = [
     specialty: "Médica Especialista en Ginecología y Obstetricia UBA. MP 93492. MN 98120",
     image: "/uploads/alvarez.jpg",
     bio: "Diplomada en Ginecología Regenerativa, Estética y Funcional. Posgrado en Menopausia y Andropausia.",
-    location: "Consultorio Corpus, Tel. 2317-523636/37"
+    location: "CONSULTORIOS ZAB"
   },
   {
     id: "buonanno",
@@ -16,7 +16,7 @@ const doctors = [
     specialty: "Médica Especialista en Ginecología y Obstetricia UNLP. MP 70817",
     image: "/uploads/buonanno.jpg",
     bio: "Diplomada en Ginecología Regenerativa, Estética y Funcional. Posgrado en Menopausia y Andropausia.",
-    location: "Consultorios Galeno, Tel. 2317-612842"
+    location: "CONSULTORIOS ZAB"
   },
   {
     id: "zega",
@@ -24,7 +24,7 @@ const doctors = [
     specialty: "Médica Especialista en Ginecología y Obstetricia UNLP. MP 111765",
     image: "/uploads/zega.jpg",
     bio: "Diplomada en Ginecología Regenerativa, Estética y Funcional. Posgrado en Menopausia y Andropausia.",
-    location: "Consultorio Salta Salud, Tel. 2317-522612"
+    location: "CONSULTORIOS ZAB"
   }
 ]
 
@@ -56,14 +56,17 @@ export function Team() {
                   <h3 className="font-serif text-xl text-foreground mb-2">{doctor.name}</h3>
                   <p className="text-primary text-sm font-medium mb-4">{doctor.specialty}</p>
                   <p className="text-muted-foreground text-base leading-relaxed mb-4">{doctor.bio}</p>
-                  <div className="flex items-start justify-center text-sm text-primary font-medium">
+                  <a
+                    href="#contacto"
+                    className="flex items-start justify-center text-sm text-primary font-medium hover:underline"
+                  >
                     <MapPinIcon />
                     <div className="flex flex-col text-left">
                       {doctor.location && doctor.location.split(', ').map((line: string, index: number) => (
                         <span key={index}>{line}</span>
                       ))}
                     </div>
-                  </div>
+                  </a>
                 </CardContent>
               </Card>
             )

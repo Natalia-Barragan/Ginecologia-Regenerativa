@@ -53,7 +53,25 @@ Teléfono de contacto: ${formData.phone}`
                   </div>
                   <div>
                     <h3 className="font-serif text-lg text-foreground mb-1">WhatsApp</h3>
-                    <p className="text-muted-foreground text-base">+54 2317 47-4858</p>
+                    <p className="text-muted-foreground text-base">
+                      <a
+                        href="https://wa.me/542317474858"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-primary hover:underline"
+                      >
+                        +54 2317 474858
+                      </a>
+                      {" / "}
+                      <a
+                        href="https://wa.me/542317623646"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-primary hover:underline"
+                      >
+                        +54 2317 623646
+                      </a>
+                    </p>
                     <p className="text-sm text-muted-foreground mt-1">Respuesta rápida</p>
                   </div>
                 </div>
@@ -84,6 +102,7 @@ Teléfono de contacto: ${formData.phone}`
                   <div>
                     <h3 className="font-serif text-lg text-foreground mb-1">Dirección</h3>
                     {/* <p className="text-muted-foreground text-base">Av. Santa Fe 1234, Piso 5</p> */}
+                    <p className="text-sm text-muted-foreground mt-1">Cardenal Pironio 1744,</p>
                     <p className="text-sm text-muted-foreground mt-1">9 de Julio, Buenos Aires, Argentina</p>
                   </div>
                 </div>
@@ -109,7 +128,7 @@ Teléfono de contacto: ${formData.phone}`
           {/* Contact Form */}
           <Card className="bg-card border-border">
             <CardContent className="p-8">
-              <h3 className="font-serif text-3xl text-foreground mb-4">Agendar Turno</h3>
+              <h3 className="font-serif text-3xl text-foreground mb-6 text-center">Agendar Turno</h3>
               <p className="text-muted-foreground mb-6">
                 Completá el formulario y te contactaremos a la brevedad.
               </p>

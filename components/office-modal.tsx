@@ -65,7 +65,7 @@ export function OfficeModal() {
                         </div>
 
                         {/* Text */}
-                        <div className="text-muted-foreground space-y-3 md:space-y-4 leading-normal md:leading-relaxed text-justify px-1 md:px-4 text-xs sm:text-sm md:text-lg/8">
+                        <div className="text-muted-foreground space-y-3 md:space-y-4 leading-normal md:leading-relaxed text-justify px-1 md:px-4 text-xs sm:text-sm md:text-lg/8 mt-16">
                             <p>
                                 Somos un equipo interdisciplinario de tres médicas ginecólogas con una misión clara: integrar la ginecología tradicional con los últimos avances en medicina regenerativa y funcional.
                             </p>
